@@ -7,14 +7,7 @@ MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
     if (err) {console.log('error')
 		throw err}
     datab = client.db('users');
-    try {
-        if (err) { console.log('error') };
-        datab = client.db('users');
-        console.log("MongoDB Connected");
-    } catch (error) {
-        console.log(error);
-        console.log("Error connecting");
-    }
+	console.log('connected to database');
 })
 
 const express = require('express')
